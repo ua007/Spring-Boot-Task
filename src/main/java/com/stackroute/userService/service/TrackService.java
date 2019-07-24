@@ -13,4 +13,8 @@ public interface TrackService {
     public Track updateUser(int id, String name, String comment);
 
     public List<Track> getAllUsers();
+
+    public List<Track> getByTrackName(String name);
+
+    public List<Track> getByTrackNameSortByName(String name);
 }

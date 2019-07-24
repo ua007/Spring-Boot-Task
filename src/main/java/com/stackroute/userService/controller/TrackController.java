@@ -75,4 +75,13 @@ public class TrackController {
             return new ResponseEntity<String>(ex.getMessage(),HttpStatus.CONFLICT);
         }
     }
+
+    @GetMapping("query")
+    public ResponseEntity<?> getAllTracks() {
+        ResponseEntity responseEntity = new ResponseEntity<>(trackService.getAllUsers(), HttpStatus.OK);
+        System.out.println(trackService.getByTrackName("hello").toString());
+        System.out.println(trackService.getByTrackName("hello").toString());
+        return responseEntity;
+
+    }
 }
