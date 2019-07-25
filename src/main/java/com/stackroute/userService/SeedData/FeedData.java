@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 @PropertySource("application.properties")
-public class DataFeed implements CommandLineRunner {
+class DataFeed implements CommandLineRunner {
 
     private Track feedTrackData = new Track();
 
