@@ -1,1 +1,1 @@
-1. Complete all the endpoints for CRUD operations on Muzix
+Running Logic on Spring Startup
