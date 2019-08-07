@@ -22,7 +22,7 @@ public class TrackController {
         this.trackService = trackService;
     }
 
-    @PostMapping("track")
+    @PostMapping("tracks")
     public ResponseEntity<?> saveTrack(@RequestBody Track track) throws TrackAlreadyExistException
     {
         ResponseEntity responseEntity;
@@ -65,7 +65,7 @@ public class TrackController {
         return responseEntity;
     }
 
-    @GetMapping("track")
+    @GetMapping("tracks")
     public ResponseEntity<?> getAllTrack() throws Exception
     {
        
@@ -73,7 +73,7 @@ public class TrackController {
         
     }
 
-    @GetMapping("tracks")
+    @GetMapping("getAllTracks")
     public ResponseEntity<?> getAllTracks() throws Exception {
         ResponseEntity responseEntity = new ResponseEntity<>(trackService.getAllUsers(), HttpStatus.OK);
         System.out.println(trackService.getByTrackName("hello").toString());
