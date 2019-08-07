@@ -95,13 +95,6 @@ public class UserControllerTest {
                 .andDo(MockMvcResultHandlers.print());
     }
 
-
-     /* when(trackService.deleteTrack(track.getId()));
-      mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/track").contentType(MediaType.APPLICATION_JSON).content(asJsonString(track)))
-        .andExpect(MockMvcResultMatchers.status().isOk())
-        .andDo(MockMvcResultHandlers.print());*/
-
-
     private static String asJsonString(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);
