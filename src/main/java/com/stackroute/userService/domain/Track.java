@@ -16,8 +16,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Track {
 
     @Id
-    int id;
-    String name;
-    String artist;
+    private int id;
+    private String name;
+    private String artist;
 
 }
