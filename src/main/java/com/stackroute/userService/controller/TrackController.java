@@ -23,7 +23,7 @@ public class TrackController {
     }
 
     @PostMapping("track")
-    public ResponseEntity<?> saveUser(@RequestBody Track track)
+    public ResponseEntity<?> saveTrack(@RequestBody Track track)
     {
         ResponseEntity responseEntity;
         try
@@ -48,7 +48,7 @@ public class TrackController {
     }
 
     @DeleteMapping("track/{userId}")
-    public ResponseEntity<?> deleteUser(@PathVariable Integer userId) throws TrackNotFoundException
+    public ResponseEntity<?> deleteTrack(@PathVariable Integer userId) throws TrackNotFoundException
     {
         ResponseEntity responseEntity;
         trackService.deleteUser(userId);
@@ -58,7 +58,7 @@ public class TrackController {
     }
 
     @PutMapping("track")
-    public ResponseEntity<?> updateUser(@RequestBody Track track) throws TrackNotFoundException
+    public ResponseEntity<?> updateTrack(@RequestBody Track track) throws TrackNotFoundException
     {
 
         trackService.updateUser(track);
@@ -68,7 +68,7 @@ public class TrackController {
     }
 
     @GetMapping("tracks")
-    public ResponseEntity<?> getAllUser()
+    public ResponseEntity<?> getAllTrack()
     {
         try {
             return new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
