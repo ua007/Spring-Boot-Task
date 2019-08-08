@@ -1,4 +1,4 @@
-package com.stackroute.userService.Config;
+package com.stackroute.trackService.config;
 
 import org.apache.catalina.servlets.WebdavServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

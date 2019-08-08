@@ -1,7 +1,7 @@
-package com.stackroute.userService.controller;
+package com.stackroute.trackService.controller;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.service.TrackService;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.service.TrackService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

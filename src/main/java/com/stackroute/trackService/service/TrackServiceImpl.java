@@ -1,7 +1,7 @@
-package com.stackroute.userService.service;
+package com.stackroute.trackService.service;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.repository.TrackRepository;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.repository.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

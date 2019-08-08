@@ -1,6 +1,6 @@
-package com.stackroute.userService.repository;
+package com.stackroute.trackService.repository;
 
-import com.stackroute.userService.domain.Track;
+import com.stackroute.trackService.domain.Track;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
