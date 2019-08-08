@@ -20,13 +20,13 @@ public class TrackServiceImpl implements TrackService {
     }
 
     @Override
-    public Track saveUser(Track track) throws TrackAlreadyExistException {
+    public Track saveUser(Track track)  {
         Track savedTrack = trackRepository.save(track);
         return savedTrack;
     }
 
     @Override
-    public List<Track> deleteUser(int id) throws TrackNotFoundException {
+    public List<Track> deleteUser(int id) {
         trackRepository.deleteById(id);
         return trackRepository.findAll();
     }

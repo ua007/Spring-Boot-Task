@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface TrackService {
 
-    public Track saveUser(Track track) throws TrackAlreadyExistException;
+    public Track saveUser(Track track);
 
-    public List<Track> deleteUser(int id) throws TrackNotFoundException;
+    public List<Track> deleteUser(int id);
 
     public Track updateUser(int id, String name, String comment);
 
