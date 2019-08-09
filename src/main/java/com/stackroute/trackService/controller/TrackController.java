@@ -1,9 +1,10 @@
-package com.stackroute.userService.controller;
+package com.stackroute.trackService.controller;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.exceptions.TrackAlreadyExistException;
-import com.stackroute.userService.exceptions.TrackNotFoundException;
-import com.stackroute.userService.service.TrackService;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.exceptions.TrackAlreadyExistException;
+import com.stackroute.trackService.exceptions.TrackNotFoundException;
+import com.stackroute.trackService.service.TrackService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,12 +24,12 @@ public class TrackController {
     }
 
     @PostMapping("track")
-    public ResponseEntity<?> saveUser(@RequestBody Track track) throws TrackAlreadyExistException
+    public ResponseEntity<?> saveTrack(@RequestBody Track track) throws TrackAlreadyExistException
     {
         ResponseEntity responseEntity;
         try
         {
-            trackService.saveUser(track);
+            trackService.saveTrack(track);
             responseEntity=new ResponseEntity<String>("Successfully created", HttpStatus.CREATED);
         }catch (TrackAlreadyExistException ex)
         {
@@ -38,13 +39,13 @@ public class TrackController {
     }
 
     @DeleteMapping("track/{userId}")
-    public ResponseEntity<?> deleteUser(@PathVariable int userId) throws TrackNotFoundException
+    public ResponseEntity<?> deleteTrack(@PathVariable int userId) throws TrackNotFoundException
     {
         ResponseEntity responseEntity;
         try
         {
-            trackService.deleteUser(userId);
-            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
+            trackService.deleteTrack(userId);
+            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllTrack(), HttpStatus.OK);
         }catch (TrackNotFoundException ex)
         {
             responseEntity=new ResponseEntity<String>(ex.getMessage(),HttpStatus.CONFLICT);
@@ -53,12 +54,12 @@ public class TrackController {
     }
 
     @PutMapping("track/{userId}/{name}/{comment}")
-    public ResponseEntity<?> updateUser(@PathVariable int id,@PathVariable String name,@PathVariable String comment)
+    public ResponseEntity<?> updateTrack(@PathVariable int id,@PathVariable String name,@PathVariable String comment)
     {
         ResponseEntity responseEntity;
         try {
-            trackService.updateUser(id,name,comment);
-            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllUsers(),HttpStatus.OK);
+            trackService.updateTrack(id,name,comment);
+            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllTrack(),HttpStatus.OK);
         }
         catch (Exception ex)
         {
@@ -68,10 +69,10 @@ public class TrackController {
     }
 
     @GetMapping("tracks")
-    public ResponseEntity<?> getAllUser()
+    public ResponseEntity<?> getAllTrack()
     {
         try {
-            return new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
+            return new ResponseEntity<List<Track>>(trackService.getAllTrack(), HttpStatus.OK);
         }
         catch (Exception ex)
         {
@@ -81,7 +82,7 @@ public class TrackController {
 
     @GetMapping("query")
     public ResponseEntity<?> getAllTracks() {
-        ResponseEntity responseEntity = new ResponseEntity<>(trackService.getAllUsers(), HttpStatus.OK);
+        ResponseEntity responseEntity = new ResponseEntity<>(trackService.getAllTrack(), HttpStatus.OK);
         System.out.println(trackService.getByTrackName("hello").toString());
         System.out.println(trackService.getByTrackName("hello").toString());
         return responseEntity;

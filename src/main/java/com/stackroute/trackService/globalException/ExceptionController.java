@@ -1,7 +1,7 @@
-package com.stackroute.userService.globalException;
+package com.stackroute.trackService.globalException;
 
-import com.stackroute.userService.exceptions.TrackNotFoundException;
-import com.stackroute.userService.exceptions.TrackAlreadyExistException;
+import com.stackroute.trackService.exceptions.TrackNotFoundException;
+import com.stackroute.trackService.exceptions.TrackAlreadyExistException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
