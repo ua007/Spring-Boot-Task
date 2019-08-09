@@ -1,9 +1,10 @@
-package com.stackroute.userService.controller;
+package com.stackroute.trackService.controller;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.exceptions.TrackAlreadyExistException;
-import com.stackroute.userService.exceptions.TrackNotFoundException;
-import com.stackroute.userService.service.TrackService;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.exceptions.TrackAlreadyExistException;
+import com.stackroute.trackService.exceptions.TrackNotFoundException;
+import com.stackroute.trackService.service.TrackService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class TrackController {
     }
 
     @PostMapping("track")
-    public ResponseEntity<?> saveUser(@RequestBody Track track) throws TrackAlreadyExistException
+    public ResponseEntity<?> saveTrack(@RequestBody Track track) throws TrackAlreadyExistException
     {
         ResponseEntity responseEntity;
         try
@@ -38,7 +39,7 @@ public class TrackController {
     }
 
     @DeleteMapping("track/{userId}")
-    public ResponseEntity<?> deleteUser(@PathVariable int userId) throws TrackNotFoundException
+    public ResponseEntity<?> deleteTrack(@PathVariable int userId) throws TrackNotFoundException
     {
         ResponseEntity responseEntity;
         try
@@ -53,7 +54,7 @@ public class TrackController {
     }
 
     @PutMapping("track/{userId}/{name}/{comment}")
-    public ResponseEntity<?> updateUser(@PathVariable int id,@PathVariable String name,@PathVariable String comment)
+    public ResponseEntity<?> updateTrack(@PathVariable int id,@PathVariable String name,@PathVariable String comment)
     {
         ResponseEntity responseEntity;
         try {
@@ -68,7 +69,7 @@ public class TrackController {
     }
 
     @GetMapping("tracks")
-    public ResponseEntity<?> getAllUser()
+    public ResponseEntity<?> getAllTrack()
     {
         try {
             return new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
