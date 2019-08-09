@@ -1,6 +1,6 @@
-package com.stackroute.userService.services;
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.repository.TrackRepository;
+package com.stackroute.trackService.services;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.repository.TrackRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
