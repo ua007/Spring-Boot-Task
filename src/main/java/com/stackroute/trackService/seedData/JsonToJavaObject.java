@@ -1,13 +1,12 @@
-package com.stackroute.userService.SeedData;
+package com.stackroute.trackService.SeedData;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.repository.TrackRepository;
+import com.stackroute.trackService.domain.Track;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
+
 @JsonIgnoreProperties
 public class JsonToJavaObject {
 

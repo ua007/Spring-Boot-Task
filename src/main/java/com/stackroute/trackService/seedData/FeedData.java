@@ -1,7 +1,7 @@
-package com.stackroute.userService.SeedData;
+package com.stackroute.trackService.SeedData;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.service.TrackService;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.service.TrackService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

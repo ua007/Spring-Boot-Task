@@ -1,10 +1,10 @@
-package com.stackroute.userService.controller;
+package com.stackroute.trackService.controller;
 
-import com.stackroute.userService.SeedData.JsonToJavaObject;
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.exceptions.TrackAlreadyExistException;
-import com.stackroute.userService.exceptions.TrackNotFoundException;
-import com.stackroute.userService.service.TrackService;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.exceptions.TrackAlreadyExistException;
+import com.stackroute.trackService.exceptions.TrackNotFoundException;
+import com.stackroute.trackService.service.TrackService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +28,7 @@ public class TrackController {
     {
         ResponseEntity responseEntity;
         
-            trackService.saveUser(track);
+            trackService.saveTrack(track);
             responseEntity=new ResponseEntity<String>("Successfully created", HttpStatus.CREATED);
         
         return responseEntity;
@@ -38,9 +38,9 @@ public class TrackController {
     public ResponseEntity<?> getAllTrack(@RequestBody List<Track> track) throws RuntimeException, TrackAlreadyExistException {
         ResponseEntity responseEntity;
         for(Track t:track) {
-            trackService.saveUser(t);
+            trackService.saveTrack(t);
         }
-        responseEntity = new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.CREATED);
+        responseEntity = new ResponseEntity<List<Track>>(trackService.getAllTracks(), HttpStatus.CREATED);
         return responseEntity;
     }
 
@@ -49,8 +49,8 @@ public class TrackController {
     {
         ResponseEntity responseEntity;
         
-            trackService.deleteUser(userId);
-            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
+            trackService.deleteTrack(userId);
+            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllTracks(), HttpStatus.OK);
         
         return responseEntity;
     }
@@ -60,8 +60,8 @@ public class TrackController {
     {
         ResponseEntity responseEntity;
        
-            trackService.updateUser(id,name,comment);
-            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllUsers(),HttpStatus.OK);
+            trackService.updateTrack(id,name,comment);
+            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllTracks(),HttpStatus.OK);
         
         return responseEntity;
     }
@@ -70,13 +70,13 @@ public class TrackController {
     public ResponseEntity<?> getAllTrack() throws Exception
     {
        
-            return new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
+            return new ResponseEntity<List<Track>>(trackService.getAllTracks(), HttpStatus.OK);
         
     }
 
     @GetMapping("getAllTracks")
     public ResponseEntity<?> getAllTracks() throws Exception {
-        ResponseEntity responseEntity = new ResponseEntity<>(trackService.getAllUsers(), HttpStatus.OK);
+        ResponseEntity responseEntity = new ResponseEntity<>(trackService.getAllTracks(), HttpStatus.OK);
         System.out.println(trackService.getByTrackName("hello").toString());
         System.out.println(trackService.getByTrackName("hello").toString());
         return responseEntity;
