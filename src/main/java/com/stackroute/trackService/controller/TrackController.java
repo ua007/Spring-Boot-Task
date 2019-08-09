@@ -27,7 +27,7 @@ public class TrackController {
         ResponseEntity responseEntity;
         try
         {
-            trackService.saveUser(track);
+            trackService.saveTrack(track);
             responseEntity=new ResponseEntity<String>("Successfully created", HttpStatus.CREATED);
         }catch (Exception ex)
         {
@@ -42,8 +42,8 @@ public class TrackController {
         ResponseEntity responseEntity;
         try
         {
-            trackService.deleteUser(userId);
-            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
+            trackService.deleteTrack(userId);
+            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllTracks(), HttpStatus.OK);
         }catch (Exception ex)
         {
             responseEntity=new ResponseEntity<String>(ex.getMessage(),HttpStatus.CONFLICT);
@@ -56,8 +56,8 @@ public class TrackController {
     {
         ResponseEntity responseEntity;
         try {
-            trackService.updateUser(id,name,comment);
-            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllUsers(),HttpStatus.OK);
+            trackService.updateTrack(id,name,comment);
+            responseEntity=new ResponseEntity<List<Track>>(trackService.getAllTracks(),HttpStatus.OK);
         }
         catch (Exception ex)
         {
@@ -70,7 +70,7 @@ public class TrackController {
     public ResponseEntity<?> getAllUser()
     {
         try {
-            return new ResponseEntity<List<Track>>(trackService.getAllUsers(), HttpStatus.OK);
+            return new ResponseEntity<List<Track>>(trackService.getAllTracks(), HttpStatus.OK);
         }
         catch (Exception ex)
         {
