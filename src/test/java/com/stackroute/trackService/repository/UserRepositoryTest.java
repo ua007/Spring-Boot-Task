@@ -1,7 +1,6 @@
-package com.stackroute.userService.repository;
+package com.stackroute.trackService.repository;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.repository.TrackRepository;
+import com.stackroute.trackService.domain.Track;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,7 +8,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;

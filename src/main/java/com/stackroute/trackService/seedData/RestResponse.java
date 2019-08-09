@@ -1,6 +1,6 @@
-package com.stackroute.userService.SeedData;
+package com.stackroute.trackService.SeedData;
 
-import com.stackroute.userService.domain.Track;
+import com.stackroute.trackService.domain.Track;
 
 import java.util.Arrays;
 

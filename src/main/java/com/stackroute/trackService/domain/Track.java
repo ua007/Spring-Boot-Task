@@ -1,6 +1,5 @@
-package com.stackroute.userService.domain;
+package com.stackroute.trackService.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

@@ -1,14 +1,6 @@
-package com.stackroute.userService.SeedData;
+package com.stackroute.trackService.SeedData;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.repository.TrackRepository;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
 
 public class JsonObject {
 

@@ -1,10 +1,10 @@
-package com.stackroute.userService.services;
+package com.stackroute.trackService.services;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.exceptions.TrackAlreadyExistException;
-import com.stackroute.userService.exceptions.TrackNotFoundException;
-import com.stackroute.userService.repository.TrackRepository;
-import com.stackroute.userService.service.TrackServiceImpl;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.exceptions.TrackAlreadyExistException;
+import com.stackroute.trackService.exceptions.TrackNotFoundException;
+import com.stackroute.trackService.repository.TrackRepository;
+import com.stackroute.trackService.service.TrackServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

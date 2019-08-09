@@ -1,6 +1,5 @@
-package com.stackroute.userService;
+package com.stackroute.trackService;
 
-import com.stackroute.userService.SeedData.JsonObject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
