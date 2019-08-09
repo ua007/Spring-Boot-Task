@@ -22,7 +22,7 @@ public class TrackController {
     }
 
     @PostMapping("track")
-    public ResponseEntity<?> saveUser(@RequestBody Track track)
+    public ResponseEntity<?> saveTrack(@RequestBody Track track)
     {
         ResponseEntity responseEntity;
         try

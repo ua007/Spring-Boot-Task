@@ -20,19 +20,19 @@ public class TrackServiceImpl implements TrackService {
     }
 
     @Override
-    public Track saveUser(Track track)  {
+    public Track saveTrack(Track track)  {
         Track savedTrack = trackRepository.save(track);
         return savedTrack;
     }
 
     @Override
-    public List<Track> deleteUser(int id) {
+    public List<Track> deleteTrack(int id) {
         trackRepository.deleteById(id);
         return trackRepository.findAll();
     }
 
     @Override
-    public Track updateUser(int id, String name, String comment) {
+    public Track updateTrack(int id, String name, String comment) {
         Optional<Track> user= trackRepository.findById(id);
         Track track =user.get();
         track.setName(name);
@@ -43,7 +43,7 @@ public class TrackServiceImpl implements TrackService {
     }
 
     @Override
-    public List<Track> getAllUsers() {
+    public List<Track> getAllTracks() {
 
         return trackRepository.findAll();
     }
