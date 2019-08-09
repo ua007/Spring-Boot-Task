@@ -1,4 +1,4 @@
-package com.stackroute.userService.exceptions;
+package com.stackroute.trackService.exceptions;
 
 public class TrackAlreadyExistException extends Exception {
 
