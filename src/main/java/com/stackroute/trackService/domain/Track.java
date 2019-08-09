@@ -1,6 +1,4 @@
-package com.stackroute.userService.domain;
-
-import lombok.Data;
+package com.stackroute.trackService.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
