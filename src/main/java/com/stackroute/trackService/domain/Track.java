@@ -1,4 +1,4 @@
-package com.stackroute.userService.domain;
+package com.stackroute.trackService.domain;
 
 import lombok.*;
 
