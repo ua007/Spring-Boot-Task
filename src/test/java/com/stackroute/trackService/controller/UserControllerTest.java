@@ -1,8 +1,7 @@
-package com.stackroute.userService.controller;
+package com.stackroute.trackService.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.stackroute.userService.controller.TrackController;
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.service.TrackService;
+import com.stackroute.trackService.domain.Track;
+import com.stackroute.trackService.service.TrackService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

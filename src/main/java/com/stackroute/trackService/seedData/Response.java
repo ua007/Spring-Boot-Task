@@ -1,4 +1,4 @@
-package com.stackroute.userService.seedData;
+package com.stackroute.trackService.seedData;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,7 +1,6 @@
-package com.stackroute.userService.repository;
+package com.stackroute.trackService.repository;
 
-import com.stackroute.userService.domain.Track;
-import com.stackroute.userService.repository.TrackRepository;
+import com.stackroute.trackService.domain.Track;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
